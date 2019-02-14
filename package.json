@@ -1,0 +1,59 @@
+{
+  "name": "myplugin",
+  "description": "pet project plugin",
+  "version": "1.0.0",
+  "author": "Zane Whitfield",
+  "bugs": "https://github.com/zwhitfield3/myplugin/issues",
+  "dependencies": {
+    "@heroku-cli/command": "^8.2.6",
+    "@oclif/command": "^1.5.10",
+    "@oclif/config": "^1.12.6",
+    "tslib": "^1.9.3"
+  },
+  "devDependencies": {
+    "@heroku-cli/schema": "^1.0.25",
+    "@oclif/dev-cli": "^1.21.0",
+    "@oclif/plugin-help": "^2.1.6",
+    "@oclif/test": "^1.2.4",
+    "@oclif/tslint": "^3.1.1",
+    "@types/chai": "^4.1.7",
+    "@types/mocha": "^5.2.6",
+    "@types/node": "^10.12.26",
+    "chai": "^4.2.0",
+    "globby": "^8.0.2",
+    "mocha": "^5.2.0",
+    "nyc": "^13.2.0",
+    "ts-node": "^8.0.2",
+    "tslint": "^5.12.1",
+    "typescript": "^3.3.3"
+  },
+  "engines": {
+    "node": ">=8.0.0"
+  },
+  "files": [
+    "/lib",
+    "/npm-shrinkwrap.json",
+    "/oclif.manifest.json",
+    "/yarn.lock"
+  ],
+  "homepage": "https://github.com/zwhitfield3/myplugin",
+  "keywords": [
+    "oclif-plugin"
+  ],
+  "license": "Heroku",
+  "oclif": {
+    "commands": "./lib/commands",
+    "bin": "oclif-example",
+    "devPlugins": [
+      "@oclif/plugin-help"
+    ]
+  },
+  "repository": "zwhitfield3/myplugin",
+  "scripts": {
+    "postpack": "rm -f oclif.manifest.json",
+    "posttest": "tslint -p test -t stylish",
+    "prepack": "rm -rf lib && tsc -b && oclif-dev manifest && oclif-dev readme",
+    "test": "nyc --extension .ts mocha --forbid-only \"test/**/*.test.ts\"",
+    "version": "oclif-dev readme && git add README.md"
+  }
+}
