@@ -22,6 +22,8 @@ export default class Info extends Command {
       const app = response.body
       this.log('App Name: ' + app.name)
       this.log('Stack: ' + app.stack.name)
-      this.log('Owner: ' + app.stack.owner)
+      this.log('Owner: ' + app.owner.email)
+      this.log('Git URL: ' + app.git_url)
+      this.log('Last Updated: ' + app.updated_at)
     }
   }
