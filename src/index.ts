@@ -2,7 +2,7 @@ import {Command, flags} from '@heroku-cli/command'
 import * as Heroku from '@heroku-cli/schema'
 
 export default class index extends Command {
-  static description = 'say hi to an app'
+  static description = 'Gives you a list of your apps'
   static flags = {
     remote: flags.remote(),
     app: flags.app({required: true})
