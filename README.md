@@ -51,3 +51,5 @@ EXAMPLE
 
 _See code: [src/commands/hello.ts](https://github.com/zwhitfield3/myplugin/blob/v1.0.0/src/commands/hello.ts)_
 <!-- commandsstop -->
+
+sup
